@@ -1,0 +1,56 @@
+#include<stdio.h>
+int stack[5],top=-1;
+int is_full()
+{
+    if(top==4)return 1;
+    else return 0;
+}
+int is_empty()
+{
+    if(top==-1)return 1;
+    else return 0;
+}
+int peek()
+{
+    if(is_empty())printf("Stack empty\n");
+    else return stack[top];
+}
+void push(int x)
+{
+    if(is_full())printf("Stack Full\n");
+    else{
+        top=top+1;
+        stack[top]=x;
+    }
+}
+int pop()
+{
+    if(is_empty())printf("Stack empty\n");
+    else{
+        int val=stack[top];
+        top--;
+        return val;
+    }
+
+}
+
+int main()
+{
+
+   push(10);
+   push(50);
+   push(60);
+   push(100);
+   push(200);
+   push(300);
+
+   printf("Stack Peek = %d\n",peek());
+
+   pop();
+   pop();
+   pop();
+   pop();
+   pop();
+
+    return 0;
+}
