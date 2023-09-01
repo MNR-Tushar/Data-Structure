@@ -48,4 +48,6 @@ int main()
     pop();
     pop();
     pop();
+
+    return 0;
 }
