@@ -29,7 +29,7 @@ int main()
     current->link=NULL;
 
 
-    //intsert any position;
+    //insert any position;
     int x,val;
     printf("Enter the position & Value: ");
     scanf("%d%d",&x,&val);
