@@ -7,45 +7,62 @@ struct node
 };
 int main()
 {
-    struct node *current, *first, *previous;
-
     int n;
+    printf("Total Node of linklist: ");
     scanf("%d",&n);
+    struct node *current,*previous,*head;
 
     for(int i=0;i<n;i++)
     {
-        current=malloc(sizeof(struct node));
-
+        current=(struct node*)malloc(sizeof(struct node));
         scanf("%d",&current->data);
-
-        if(i==0)first=current;
-        else{
+        if(i==0)
+        {
+            head=current;
+        }
+        else
+        {
             previous->link=current;
         }
         previous=current;
     }
-
     current->link=NULL;
 
-    int del;
+    //delete element of Linklist
+    int x;
     printf("Enter the position: ");
-    scanf("%d",&del);
-    struct node *p1;
-    p1=first;
+    scanf("%d",&x);
 
-    for(int i=0;i<del-2;i++)p1=p1->link;
+    if(x==1)
+    {
+        head=head->link;
+    }
+    else
+    {
+        struct node *p1=head;
+        for(int i=0;i<x-2;i++)
+        {
+            p1=p1->link;
+        }
+        if(x==n)
+        {
+            p1->link=NULL;
+        }
+        else
+        {
+            p1->link=p1->link->link;
+        }
+    }
 
-    p1->link=p1->link->link;
 
 
-
-    struct node *p=first;
-
+    struct node *p=head;
     while(p!=NULL)
     {
         printf("%d\n",p->data);
         p=p->link;
     }
+
 
     return 0;
 }
