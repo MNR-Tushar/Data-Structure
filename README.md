@@ -1,5 +1,5 @@
 # Data-Structure
 
-*Stack
+* Stack
 
 
