@@ -1,4 +1,4 @@
 # Data-Structure
 Data Stucture
 
-# Linear Data Structure: 
+#1 Linear Data Structure: 
