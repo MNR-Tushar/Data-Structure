@@ -51,29 +51,29 @@ void insert_node(int val)
     }
 
 }
-void inoder(node *r)
+void inorder(node *r)
 {
     if(r==NULL)
         return;
-    inoder(r->left);
+    inorder(r->left);
     printf("%d ",r->data);
-    inoder(r->right);
+    inorder(r->right);
 }
-void preoder(node *r)
+void preorder(node *r)
 {
     if(r==NULL)
         return;
     printf("%d ",r->data);
-    preoder(r->left);
-    preoder(r->right);
+    preorder(r->left);
+    preorder(r->right);
 }
-void postoder(node *r)
+void postorder(node *r)
 {
     if(r==NULL)
         return;
 
-    postoder(r->left);
-    postoder(r->right);
+    postorder(r->left);
+    postorder(r->right);
     printf("%d ",r->data);
 }
 int main()
@@ -86,14 +86,14 @@ int main()
     insert_node(60);
     insert_node(80);
 
-    printf("\nIn-oder of Tree:\n");
-    inoder(root);
+    printf("\nIn-order of Tree:\n");
+    inorder(root);
     printf("\n");
-    printf("\nPre-oder of Tree:\n");
-    preoder(root);
+    printf("\nPre-order of Tree:\n");
+    preorder(root);
     printf("\n");
-    printf("\nPost-oder of Tree:\n");
-    postoder(root);
+    printf("\nPost-order of Tree:\n");
+    postorder(root);
     printf("\n");
     return 0;
 
