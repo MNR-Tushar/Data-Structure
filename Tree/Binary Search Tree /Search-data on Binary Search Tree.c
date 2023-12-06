@@ -67,7 +67,7 @@ void searchtree(int val)
             ok=1;
             break;
         }
-        else if(val<c->data)
+        else if(val<=c->data)
         {
             c=c->left;
         }
